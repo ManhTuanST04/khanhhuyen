@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 const Home = (props) => {
     const fetchData = async () => {
         // const apiLink = 'http://localhost:4000/home';
-        const apiLink = 'https://server-ticket-manager.herokuapp.com/home';
+        const apiLink = `${process.env.REACT_APP_API}/home`;
 
         try {
             const result = await axios.get(apiLink);
