@@ -21,7 +21,7 @@ const Home = (props) => {
     useEffect(() => {
         fetchData().then((res) => {
             console.log('list user: ', res);
-            setListUser(res.name);
+            setListUser(res);
         });
     }, []);
 
