@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 const Home = (props) => {
+    const [listUser, setListUser] = useState([]);
+
     const fetchData = async () => {
         // const apiLink = 'http://localhost:4000/home';
         const apiLink = `${process.env.REACT_APP_API}/home`;
@@ -16,16 +18,32 @@ const Home = (props) => {
         }
     };
 
-    const [userName, setUserName] = useState('');
-
     useEffect(() => {
         fetchData().then((res) => {
-            console.log('dddd', res);
-            setUserName(res.name);
+            console.log('list user: ', res);
+            setListUser(res.name);
         });
     }, []);
 
-    return <div>Home Page {userName}</div>;
+    return (
+        <div>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>USERNAME</th>
+                    <th>PASSWORD</th>
+                </tr>
+                {listUser &&
+                    listUser.map((item) => (
+                        <tr>
+                            <th>{item.id}</th>
+                            <th>{item.userName}</th>
+                            <th>{item.password}</th>
+                        </tr>
+                    ))}
+            </table>
+        </div>
+    );
 };
 
 export default Home;
