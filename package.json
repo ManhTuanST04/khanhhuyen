@@ -1,4 +1,5 @@
 {
+  "cacheDirectories": [".next/cache"],
   "name": "material-kit-react",
   "author": "Devias IO",
   "licence": "MIT",
