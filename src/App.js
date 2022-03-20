@@ -2,8 +2,8 @@ import "./App.css";
 // react-router components
 // import { BrowserRouter as Router, Route, Navigate, useLocation } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./component/Home";
-import Ticket from "./component/Ticket";
+import Home from "./Component/Home";
+import Ticket from "./Component/Ticket";
 
 function App() {
   return (
