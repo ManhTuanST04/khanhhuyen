@@ -4,6 +4,9 @@ import Player from './component/Player';
 import mp3Sound from './sound/chayvenoiphiaanh.mp3';
 
 function App() {
+
+  console.log('Check 01');
+
   return (
     <div className="App">
       <header className="App-header">
