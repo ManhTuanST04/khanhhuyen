@@ -5,7 +5,7 @@ import mp3Sound from './sound/chayvenoiphiaanh.mp3';
 
 function App() {
 
-  console.log('Check No2 03 form dev01');
+  console.log('Check No2 02 form dev01');
 
   return (
     <div className="App">
